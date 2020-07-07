@@ -2,6 +2,7 @@ package com.gfasil.rabbitmq.weatherapp;
 
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.annotation.EnableRabbit;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -20,6 +21,9 @@ public class WeatherappApplication {
     public Queue queue(){
         return new Queue(weatherQueue,true);
     }
-
+@Bean
+    public RabbitTemplate rabbitTemplate(){
+        return new RabbitTemplate();
+    }
 
 }
