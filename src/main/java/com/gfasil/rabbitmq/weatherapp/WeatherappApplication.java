@@ -20,9 +20,5 @@ public class WeatherappApplication {
     public Queue queue(){
         return new Queue(weatherQueue,true);
     }
-/*@Bean
-    public RabbitTemplate rabbitTemplate(){
-        return new RabbitTemplate();
-    }*/
 
 }
